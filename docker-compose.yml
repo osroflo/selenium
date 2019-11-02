@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+       
+    selenium:
+        build: 
+            context: ./selenium
+            args:
+                - DISPLAY_ENVIRONMENT=SELENIUM Docker
+                - SERVICE_USER_ID
+                - SERVICE_GROUP_ID
+                - BUILD_TARGET
+            
+        container_name: selenium
+        
+        network_mode: host
+    

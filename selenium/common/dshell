@@ -1,0 +1,10 @@
+#!/bin/bash
+# Opens a shell and presents a nice prompt.
+
+if [[ "$DSHELL_USER" ]]; then
+    dsUser=$DSHELL_USER
+else
+    dsUser=$(cat /etc/dshell/default-user)
+fi
+
+su - $dsUser -s /bin/bash
